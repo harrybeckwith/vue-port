@@ -66,6 +66,18 @@ export default {
     components: {
         AccordionDropdown,
     },
+    metaInfo: {
+    // Children can override the title.
+    title: 'Vue js tips',
+    // Result: My Page Title ← My Site
+    // If a child changes the title to "My Other Page Title",
+    // it will become: My Other Page Title ← My Site
+    titleTemplate: '%s ← Accordion',
+    // Define meta tags here.
+    meta: [
+      {name: 'How to create a vue js accorion a step by step guide.', content: 'An accordion is a useful component that can be used for things such as FAQs, it is also useful for reducing the height of the page if lots of content is needed, clicking on the question opens the related answer beneath, clicking on another question will close any open open accordions.'}
+    ]
+  },
     data() {
         return {
             accordionInfo: [

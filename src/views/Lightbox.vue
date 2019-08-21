@@ -140,6 +140,18 @@ export default {
     components: {
         Lightbox,
     },
+    metaInfo: {
+    // Children can override the title.
+    title: 'Vue js tips',
+    // Result: My Page Title ← My Site
+    // If a child changes the title to "My Other Page Title",
+    // it will become: My Other Page Title ← My Site
+    titleTemplate: '%s ← Lightbox',
+    // Define meta tags here.
+    meta: [
+      {name: 'How to create a vue js accorion a step by step guide.', content: 'A Lightbox brings thumbnails to attention and allows easy viewing of images. Pretty common to see and used on lots of sites. Lets walk through how to create a Vue Lightbox gallery. 📸'}
+    ]
+  },
     data() {
         return {
             lightboxData: [

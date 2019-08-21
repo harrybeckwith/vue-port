@@ -226,7 +226,18 @@ export const store = new Vuex.Store({
 </template>
 <script>
 export default {
-    layout: 'blog',
+       metaInfo: {
+    // Children can override the title.
+    title: 'Vue js tips',
+    // Result: My Page Title ← My Site
+    // If a child changes the title to "My Other Page Title",
+    // it will become: My Other Page Title ← My Site
+    titleTemplate: '%s ← Vuex',
+    // Define meta tags here.
+    meta: [
+      {name: 'How to create a vue js accorion a step by step guide.', content: 'When an app becomes complex in terms of where data is being passed between multiple components, it is time to make use of Vuex.'}
+    ]
+  },
     data() {
       return {
         one: `<template>

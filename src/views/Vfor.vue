@@ -28,7 +28,18 @@
 </template>
 <script>
 export default {
-    layout: 'blog',
+    metaInfo: {
+    // Children can override the title.
+    title: 'Vue js tips',
+    // Result: My Page Title ← My Site
+    // If a child changes the title to "My Other Page Title",
+    // it will become: My Other Page Title ← My Site
+    titleTemplate: '%s ← v-for active',
+    // Define meta tags here.
+    meta: [
+      {name: 'How to create a vue js accorion a step by step guide.', content: 'Using v-for inside a template is pretty common within a Vue app. It can become tricky if you wanted to toggle an active class on the selected item only and not every item inside the loop. Lets see how…'}
+    ]
+  },
     data() {
       return {
         one: `<template>

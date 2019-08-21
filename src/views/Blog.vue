@@ -20,7 +20,18 @@
 <script>
 export default {
     name: 'blog',
-    layout: 'blog',
+    metaInfo: {
+    // Children can override the title.
+    title: 'Vue js tips',
+    // Result: My Page Title ← My Site
+    // If a child changes the title to "My Other Page Title",
+    // it will become: My Other Page Title ← My Site
+    titleTemplate: '%s ← Blog',
+    // Define meta tags here.
+    meta: [
+      {name: 'Vue js tips and tutorials on how to create re usable functionl widgets, including data, methods and much more.'}
+    ]
+  },
     data() {
         return {
             blogCards: [
