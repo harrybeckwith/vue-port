@@ -1,7 +1,8 @@
 var path = require('path');
 module.exports = {
-  publicPath: '/vue-port',
-  outputDir: 'docs',
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/vue-port/'
+    : '/',
   css: {
     loaderOptions: {
       sass: {

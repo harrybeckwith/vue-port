@@ -3,11 +3,14 @@ import Router from 'vue-router';
 import About from './views/About.vue';
 import Blog from './views/Blog.vue';
 import Vuex from './views/Vuex.vue';
+import Vfor from './views/Vfor.vue';
+import Lightbox from './views/Lightbox.vue';
+import Accordion from './views/Accordion.vue';
 
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes: [
     {
@@ -24,6 +27,21 @@ export default new Router({
       path: '/vuex',
       name: 'vuex',
       component: Vuex,
+    },
+    {
+      path: '/v-for',
+      name: 'vfor',
+      component: Vfor,
+    },
+    {
+      path: '/lightbox',
+      name: 'lightbox',
+      component: Lightbox,
+    },
+    {
+      path: '/accordion',
+      name: 'accordion',
+      component: Accordion,
     },
   ],
 });

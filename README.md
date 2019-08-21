@@ -1,5 +1,11 @@
 # portfolio
 
+# Deploy to live
+
+```
+bash deploy.sh
+```
+
 ## Project setup
 ```
 npm install

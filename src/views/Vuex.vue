@@ -9,7 +9,7 @@
         <p>
             Vuex is a state management pattern + library for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion.
         </p>
-        <img src="/img/blog/vuex/vuex.png" alt="vuex chart" class="image">
+        <img src="../assets/img/blog/vuex/vuex.png" alt="vuex chart" class="image">
         <h3 class="italic title--page">
                 Why use Vuex?
         </h3>
@@ -33,15 +33,15 @@
         <p>
             To set up Vuex you have to install the npm package.
         </p>
-        <pre><code class="language-bash"> npm i vuex --save</code></pre>
+      
+        <prism> npm i vuex --save </prism>
         <p>
            Inside the src folder, we can now set up a store.js file. 
         </p>
         <p>
             Heres how the store.js file would look.
         </p>
-<pre><code class="language-javascript">
-import Vue from 'vue';
+<prism language ="javascript">import Vue from 'vue';
 import Vuex from 'vuex';
 
 Vue.use(Vuex);
@@ -51,9 +51,9 @@ export const store = new Vuex.Store({
   mutations: {},
   actions: {},
   getters: {},
-});</code></pre>
+});</prism>
 <p>Inside main.js we can link the store to the Vue instance by importing the store file and added to Vue…</p>
-<pre><code class="language-javascript">import Vue from 'vue';
+<prism language ="javascript">import Vue from 'vue';
 import App from './App.vue';
 import { store } from './store/store';
 
@@ -62,12 +62,12 @@ Vue.config.productionTip = false;
 new Vue({
   store,
   render: h => h(App),
-}).$mount('#app');</code></pre>
+}).$mount('#app');</prism>
 <p>Right now we have the store set up 🥳 but we cannot access or edit yet 😕.</p>
 <h3 class="italic title title--page">
     How to work with the store (vuex)
 </h3>
-<img src="/img/blog/vuex/store.png" alt="vuex chart" class="image">
+<img src="../assets/img/blog/vuex/store.png" alt="vuex chart" class="image">
 <h3 class="italic title title--page">
    Mutations
 </h3>
@@ -84,7 +84,7 @@ new Vue({
           </p>
           <p><a href="https://vuex.vuejs.org/guide/getters.html" class="link" target="_blank">Documentation for getters here.</a></p>
           <p><span class="bold">Store.js</span> file with state and getters set up.</p>
-        <pre><code class="language-javascript">import Vue from 'vue'
+        <prism language ="javascript">import Vue from 'vue'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
@@ -135,7 +135,7 @@ export default new Vuex.Store({
       return state.events.find(event => event.id === id)
     }
   }
-})</code></pre>
+})</prism>
 <h3 class="title title--page italic">
     How to link the getters to components?
 </h3>
@@ -143,9 +143,9 @@ export default new Vuex.Store({
     Use computed properties, but first, we can map the getters for easy access like so.
 </p>
   <p><span class="bold">component.vue</span></p>
- <pre><code class="language-javascript">{{ one }}</code></pre>
+ <prism language ="javascript">{{ one }}</prism>
    <p><span class="bold">component.vue - script section</span></p>
-  <pre><code class="language-javascript">{{ two }}</code></pre>
+  <prism language ="javascript">{{ two }}</prism>
   <p>You have to import { mapGetters } from Vuex to be able to place inside the computed properties. Using the spread operator and pacing each getter as a string array item we can then reference individual getters inside the template.</p>
     <p>We can also create getters that take arguments which are then used as a computed property and take input inside the template. The example for this is the getter getEventById in the above two code blocks.</p>
     <h3 class="title title--page italic">
@@ -175,7 +175,7 @@ Always put <span class="bold">Mutations</span> within <span class="bold">Actions
         <p><a href="https://vuex.vuejs.org/guide/actions.html" class="link" target="_blank">Actions documentation here.</a></p>
 
 
-         <pre><code class="language-javascript">import Vue from 'vue';
+         <prism language ="javascript">import Vue from 'vue';
 import Vuex from 'vuex';
 
 Vue.use(Vuex);
@@ -205,14 +205,14 @@ export const store = new Vuex.Store({
       commit('ADD_EVENT', event);
     },
   },
-});</code></pre>
+});</prism>
 <p>
   Here we can see that mutation has been created that takes an event and pushes to the events array. The action is the code that we will dispatch to from the component, in turn, this calls the mutation and updates the store state.
 </p>
 <p>
   Let's see how to call the action inside a component.
 </p>
-     <pre><code class="language-bash">this.$store.dispatch('createEvent', this.event)</code></pre>
+     <prism language ="javascript">this.$store.dispatch('createEvent', this.event)</prism>
   <p>
     Referencing the store and dispatch with the name that matches actions function name, this will now send the this. event data into the action, then call the mutation and update the state.
   </p>

@@ -39,10 +39,18 @@ export default {
                     link: '/v-for',
                 },
                 {
-                    title: 'How to create a Vue.js lightbox 📸',
-                    date: '3 April 2019',
-                    intro: 'How to build a lightbox with source code',
+                    title: 'Build a lightbox component',
+                    date: '20 August 2019',
+                    intro:
+                        'How to create a lightbox gallery, passing in data.',
                     link: '/lightbox',
+                },
+                {
+                    title: 'Accordion toggle',
+                    date: '21 August 2019',
+                    intro:
+                        'Create an accordion with content being passed in as data.',
+                    link: '/accordion',
                 },
             ],
         };

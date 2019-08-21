@@ -6,6 +6,9 @@
 </template>
 <script>
 import NavBar from './components/NavBar';
+import 'prismjs/prism'
+import 'prismjs/themes/prism.css'
+
 export default {
     components: {
         NavBar,
