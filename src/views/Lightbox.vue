@@ -2,8 +2,7 @@
   <div>
       <h1 class="title italic">
             Create a Lightbox component
-        </h1>
-         
+      </h1> 
       <div class="gallery-grid">
         <lightbox :lightboxInfo="lightboxData"/>
       </div>

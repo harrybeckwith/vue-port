@@ -6,6 +6,7 @@ import Vuex from './views/Vuex.vue';
 import Vfor from './views/Vfor.vue';
 import Lightbox from './views/Lightbox.vue';
 import Accordion from './views/Accordion.vue';
+import Tabs from './views/Tabs.vue';
 
 Vue.use(Router);
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/accordion',
       name: 'accordion',
       component: Accordion,
+    },
+    {
+      path: '/tabs',
+      name: 'tabs',
+      component: Tabs,
     },
   ],
 });

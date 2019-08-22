@@ -63,6 +63,13 @@ export default {
                         'Create an accordion with content being passed in as data.',
                     link: '/accordion',
                 },
+                {
+                    title: 'Tab switch',
+                    date: '21 August 2019',
+                    intro:
+                        'Switch tabs and load components through naned slots.',
+                    link: '/tabs',
+                },
             ],
         };
     },

@@ -1,8 +1,6 @@
 <template>
   <div class="container--small">
-    <h3 class="title title--lg">
-      About
-    </h3>
+    <h1 class="title">About</h1>
     <p>
     Hey, i am a front end developer specialising in Vue Js! You will find, blog posts either about vue js, javascript and front end development on this site.  Enjoy ☕️
     </p>

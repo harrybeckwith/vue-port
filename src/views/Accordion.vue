@@ -3,7 +3,7 @@
     <h1 class="title italic">
             Create an Accordion component 
   </h1>
-      <AccordionDropdown  :accordionData ="accordionInfo" class="gap__md"/>
+      <AccordionDropdown :accordionData ="accordionInfo" class="gap__md"/>
         <p>Click the above accordion to see the it working 👆</p>
         <h3 class="italic title--page">
            What is an accordion?
