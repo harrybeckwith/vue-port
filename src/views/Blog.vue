@@ -65,10 +65,17 @@ export default {
                 },
                 {
                     title: 'Tab switch',
-                    date: '21 August 2019',
+                    date: '22 August 2019',
                     intro:
                         'Switch tabs and load components through naned slots.',
                     link: '/tabs',
+                },
+                 {
+                    title: 'Tool tip',
+                    date: '22 August 2019',
+                    intro:
+                        'Tool tip on hover to display extra content.',
+                    link: '/tool-tip',
                 },
             ],
         };

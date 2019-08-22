@@ -7,6 +7,7 @@ import Vfor from './views/Vfor.vue';
 import Lightbox from './views/Lightbox.vue';
 import Accordion from './views/Accordion.vue';
 import Tabs from './views/Tabs.vue';
+import ToolTip from './views/ToolTip.vue';
 
 Vue.use(Router);
 
@@ -48,6 +49,11 @@ export default new Router({
       path: '/tabs',
       name: 'tabs',
       component: Tabs,
+    },
+    {
+      path: '/tool-tip',
+      name: 'tooltip',
+      component: ToolTip,
     },
   ],
 });
