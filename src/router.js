@@ -9,6 +9,7 @@ import Accordion from './views/Accordion.vue';
 import Tabs from './views/Tabs.vue';
 import ToolTip from './views/ToolTip.vue';
 import Button from './views/Button.vue';
+import LazyImage from './views/LazyImage.vue';
 
 Vue.use(Router);
 
@@ -60,6 +61,11 @@ export default new Router({
       path: '/button',
       name: 'button',
       component: Button,
+    },
+    {
+      path: '/lazy-image',
+      name: 'lazy-image',
+      component: LazyImage,
     },
   ],
 });

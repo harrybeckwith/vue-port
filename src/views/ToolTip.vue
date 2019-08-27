@@ -1,109 +1,112 @@
 <template>
     <div>
-        <h1 class="title italic">
-            Tooltip
-      </h1>
-      <div class="gap__md">
-        <p> 
-        <tool-tip position="top">
-            <template v-slot:title>
-                tooltip top
-            </template>
-            <template v-slot:content>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. elit lacus vestibulum risus, nec bibendum purus nibh sit amet     metus. 
-            </template>
-        </tool-tip> 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Mauris pharetra convallis.
-        </p>
-        <p> Lorem ipsum dolor sit
-              <tool-tip>
-            <template v-slot:title>
-                tooltip bottom
-            </template>
-            <template v-slot:content>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. elit lacus vestibulum risus, nec bibendum purus nibh sit amet metus.
-            </template>
-        </tool-tip> 
-              amet, consectetur  adipiscing elit. Mauris pharetra convallis.
-        </p>
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        <tool-tip position="right">
-            <template v-slot:title>tooltip right</template>
-            <template v-slot:content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. elit lacus vestibulum risus, nec bibendum purus nibh sit amet metus. </template>
-        </tool-tip> 
-        Mauris pharetra convallis.
-        </p>
-            <p>   <tool-tip position="left">
-                <template v-slot:title>
-                    tooltip left
-                </template>
-                <template v-slot:content>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. elit lacus vestibulum risus, nec bibendum purus nibh sit amet metus.
-                </template>
-                </tool-tip> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra convallis.
-              
-        </p>
+        <h1 class="title italic">Tooltip</h1>
+        <div class="gap__md">
+            <p>
+                <tool-tip position="top">
+                    <template v-slot:title>tooltip top</template>
+                    <template
+                        v-slot:content
+                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. elit lacus vestibulum risus, nec bibendum purus nibh sit amet metus.</template>
+                </tool-tip>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris pharetra convallis.
+            </p>
+            <p>
+                Lorem ipsum dolor sit
+                <tool-tip>
+                    <template v-slot:title>tooltip bottom</template>
+                    <template
+                        v-slot:content
+                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. elit lacus vestibulum risus, nec bibendum purus nibh sit amet metus.</template>
+                </tool-tip>amet, consectetur adipiscing elit. Mauris pharetra convallis.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <tool-tip position="right">
+                    <template v-slot:title>tooltip right</template>
+                    <template
+                        v-slot:content
+                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. elit lacus vestibulum risus, nec bibendum purus nibh sit amet metus.</template>
+                </tool-tip>Mauris pharetra convallis.
+            </p>
+            <p>
+                <tool-tip position="left">
+                    <template v-slot:title>tooltip left</template>
+                    <template
+                        v-slot:content
+                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. elit lacus vestibulum risus, nec bibendum purus nibh sit amet metus.</template>
+                </tool-tip>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra convallis.
+            </p>
         </div>
         <p class="italic">Hover the links above to see the tooltips 👆</p>
-        <h3 class="italic title--page">
-           How to create the tooltip?
-        </h3>
+        <h3 class="italic title--page">How to create the tooltip?</h3>
+        <p>A Tooltip can be used to pop up additional information that extends from the current content. Helpful for tips 🤔</p>
+        <h3 class="italic title--page">What is needed?</h3>
         <p>
-            A Tooltip can be used to pop up additional information that extends from the current content. Helpful for tips 🤔
+            <span class="bold italic">Named slots</span> are used, each
+            <span class="bold italic">tool-tip component</span> holds the tooltip title and the pop up content for that tite.
         </p>
-         <h3 class="italic title--page">
-           What is needed?
-        </h3>
-        <p><span class="bold italic">Named slots</span> are used, each <span class="bold italic">tool-tip component</span> holds the tooltip title and the pop up content for that tite.</p>
-        <p >Here is the <span class="bold italic">parent component with tool-top template slots being passed in..</span></p>
-        <h3 class="italic title--page">
-           app.vue - template
-        </h3>
+        <p>
+            Here is the
+            <span
+                class="bold italic"
+            >parent component with tool-top template slots being passed in..</span>
+        </p>
+        <h3 class="italic title--page">app.vue - template</h3>
         <prism language="javascript">{{one}}</prism>
         <p class="bold italic">Inside the component it has</p>
         <ul class="list list--bullet">
-            <li> props position set to top - this changes the css class inside the component - for positioning of the content block.</li>
-            <li> title named slot section - the section which gets hovered on.</li>
+            <li>props position set to top - this changes the css class inside the component - for positioning of the content block.</li>
+            <li>title named slot section - the section which gets hovered on.</li>
             <li>content named slot section - holding the details of the tooltip popup.</li>
         </ul>
         <p>Let's now look inside the component.</p>
-        <h3 class="italic title--page">
-           tool-tip.vue - template
-        </h3>
-     <prism language="javascript">{{two}}</prism>
-     <p class="bold italic">Inside the template it has</p>
+        <h3 class="italic title--page">tool-tip.vue - template</h3>
+        <prism language="javascript">{{two}}</prism>
+        <p class="bold italic">Inside the template it has</p>
         <ul class="list list--bullet">
-            <li> mouseenter and mouseleave methods using the same method - to toggle the content on and off.</li>
+            <li>mouseenter and mouseleave methods using the same method - to toggle the content on and off.</li>
             <li>named titled slot</li>
             <li>transition to fade the content in/out on hover</li>
             <li>:class that takes position props - either top, left, right or bottom. This changes the position of the tool tip relative to its title.</li>
             <li>named slot for the content</li>
         </ul>
-        <h3 class="italic title--page">
-           tool-tip.vue - script
-        </h3>
-     <prism language="javascript">{{three}}</prism>
-      <p class="bold italic">Inside the script it has</p>
+        <h3 class="italic title--page">tool-tip.vue - script</h3>
+        <prism language="javascript">{{three}}</prism>
+        <p class="bold italic">Inside the script it has</p>
         <ul class="list list--bullet">
             <li>props for the position attacthed the to class in the template</li>
-            <li> data - show set to false - to hide the content for the tooltip.</li>
+            <li>data - show set to false - to hide the content for the tooltip.</li>
             <li>a method tooltipToggle to switch show to true/false on mouseenter mouseleave</li>
         </ul>
-        <p>That's the complete code to create a tooltip, using slots helps keep the content flexible enough to accept a range of content from components to static content.😎 </p>
-        <h3 class="italic title--page">
-           Finally the styles 
-        </h3>
-     <prism language="css">{{four}}</prism>
-       <p>That's the complete code to create a tooltip, using slots helps keep the content flexible enough to accept a range of content from components to static content.😎 </p>
+        <p>That's the complete code to create a tooltip, using slots helps keep the content flexible enough to accept a range of content from components to static content.😎</p>
+        <h3 class="italic title--page">Finally the styles</h3>
+        <prism language="css">{{four}}</prism>
+        <p>That's the complete code to create a tooltip, using slots helps keep the content flexible enough to accept a range of content from components to static content.😎</p>
     </div>
 </template>
 <script>
-import ToolTip from '../components/ToolTip.vue';
+import ToolTip from "../components/ToolTip.vue";
 export default {
-    name: 'Tool-tip',
+    name: "Tool-tip",
     components: {
-        ToolTip,
+        ToolTip
+    },
+    metaInfo: {
+        // Children can override the title.
+        title: "Vue js tips",
+        // Result: My Page Title ← My Site
+        // If a child changes the title to "My Other Page Title",
+        // it will become: My Other Page Title ← My Site
+        titleTemplate: "%s ← Tooltip",
+        // Define meta tags here.
+        meta: [
+            {
+                name:
+                    "A Tooltip can be used to pop up additional information that extends from the current content. Helpful for tips"
+            }
+        ]
     },
     data() {
         return {
@@ -115,7 +118,7 @@ export default {
        Inside the tool tip component content pop up section
     </template>
 </tool-tip>`,
-two: `<template>
+            two: `<template>
     <div class="tooltip">
         <div class="tooltip__title" 
         @mouseenter="tooltipToggle"
@@ -135,7 +138,7 @@ two: `<template>
       
     </div>
 </template>`,
-three: `export default {
+            three: `export default {
     name: 'ToolTip',
     props: {
         position: {
@@ -153,7 +156,8 @@ three: `export default {
             this.show = !this.show;
         }
     }
-}`, four: `.tooltip {
+}`,
+            four: `.tooltip {
         display:inline-block;
 
         &__arrow {
@@ -231,7 +235,7 @@ three: `export default {
     left: unset;
     transform: translateY(-50%) rotate(45deg);
 }`
-        }
+        };
     }
-}
+};
 </script>

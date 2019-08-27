@@ -47,6 +47,21 @@ export default {
     components: {
         BaseBtn
     },
+    metaInfo: {
+        // Children can override the title.
+        title: "Vue js tips",
+        // Result: My Page Title ← My Site
+        // If a child changes the title to "My Other Page Title",
+        // it will become: My Other Page Title ← My Site
+        titleTemplate: "%s ← Button",
+        // Define meta tags here.
+        meta: [
+            {
+                name:
+                    "A button can have many different use cases, you may want the button to be a link to external sites or just a button without a link to toggle something on the page."
+            }
+        ]
+    },
     data() {
         return {
             one: `<template>
