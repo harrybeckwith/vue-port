@@ -8,6 +8,7 @@ import Lightbox from './views/Lightbox.vue';
 import Accordion from './views/Accordion.vue';
 import Tabs from './views/Tabs.vue';
 import ToolTip from './views/ToolTip.vue';
+import Button from './views/Button.vue';
 
 Vue.use(Router);
 
@@ -54,6 +55,11 @@ export default new Router({
       path: '/tool-tip',
       name: 'tooltip',
       component: ToolTip,
+    },
+    {
+      path: '/button',
+      name: 'button',
+      component: Button,
     },
   ],
 });
