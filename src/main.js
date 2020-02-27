@@ -3,6 +3,7 @@ import App from './App.vue';
 import router from './router';
 import Prism from "vue-prism-component";
 import Meta from 'vue-meta';
+import { store } from './store/store';
 
 Vue.use(Meta);
 
@@ -12,6 +13,7 @@ Vue.config.productionTip = false;
 
 new Vue({
   router,
+  store,
   render: h => h(App),
   created() {
     if (sessionStorage.redirect) {

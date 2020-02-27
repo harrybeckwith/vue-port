@@ -86,6 +86,7 @@ export default {
     components: {
         LazyImage
     },
+    
     data() {
         return {
             one: `<template>

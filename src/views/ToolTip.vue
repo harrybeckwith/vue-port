@@ -80,7 +80,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra convall
             <li>data - show set to false - to hide the content for the tooltip.</li>
             <li>a method tooltipToggle to switch show to true/false on mouseenter mouseleave</li>
         </ul>
-        <p>That's the complete code to create a tooltip, using slots helps keep the content flexible enough to accept a range of content from components to static content.😎</p>
         <h3 class="italic title--page">Finally the styles</h3>
         <prism language="css">{{four}}</prism>
         <p>That's the complete code to create a tooltip, using slots helps keep the content flexible enough to accept a range of content from components to static content.😎</p>

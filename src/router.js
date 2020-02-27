@@ -10,7 +10,12 @@ import Tabs from "./views/Tabs.vue";
 import ToolTip from "./views/ToolTip.vue";
 import Button from "./views/Button.vue";
 import LazyImage from "./views/LazyImage.vue";
-import FormValidation from "./views/FormValidation.vue";
+import InfiniteScroll from "./views/InfiniteScroll.vue";
+import Select from "./views/Select.vue";
+import FadeTransition from "./views/FadeTransition.vue";
+import VuexModules from "./views/VuexModules.vue";
+import Computed from "./views/Computed.vue";
+import HigherOrderFunctions from "./views/HigherOrderFunctions.vue";
 
 Vue.use(Router);
 
@@ -68,9 +73,34 @@ export default new Router({
       component: LazyImage
     },
     {
-      path: "/form-validation",
-      name: "form-validation",
-      component: FormValidation
+      path: "/infinite-scroll",
+      name: "infinite-scroll",
+      component: InfiniteScroll
+    },
+    {
+      path: "/select",
+      name: "select",
+      component: Select
+    },
+    {
+      path: "/fade-transition",
+      name: "FadeTransitionPage",
+      component: FadeTransition
+    },
+    {
+      path: "/vuex-modules",
+      name: "VuexModules",
+      component: VuexModules
+    },
+    {
+      path: "/computed",
+      name: "Computed",
+      component: Computed
+    },
+    {
+      path: "/higher-order-functions",
+      name: "HigherOrderFunctions",
+      component: HigherOrderFunctions
     }
   ]
 });
