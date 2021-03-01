@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
-    "prismjs": "^1.17.1",
+    "prismjs": "^1.23.0",
     "vue": "^2.6.10",
     "vue-click-outside": "^1.0.7",
     "vue-infinite-scroll": "^2.0.2",
